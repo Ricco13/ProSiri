@@ -2648,8 +2648,9 @@ def bot(op):
                                     try:
                                         vipro.kickoutFromGroup(msg.to,[target])
                                         print (msg.to,[g.mid])
-                                    except:
-									    pass
+                                    except Exception as e:
+                                        vipro.sendText(msg.to,str(e))
+			    vipro.inviteIntoGroup(msg.to, targets)
  
 
 	    elif msg.text in ["Bot restart","Reboot"]:
